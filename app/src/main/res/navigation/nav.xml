@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.travelbudget.AuthFragment"
+        android:label="AuthFragment" >
+        <action
+            android:id="@+id/action_authFragment_to_emptyTripCardFragment"
+            app:destination="@+id/emptyTripCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emptyTripCardFragment"
+        android:name="com.example.travelbudget.EmptyTripCardFragment"
+        android:label="EmptyTripCardFragment" >
+        <action
+            android:id="@+id/action_emptyTripCardFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+</navigation>

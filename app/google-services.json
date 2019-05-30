@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "192196838109",
+    "firebase_url": "https://everyday-budget.firebaseio.com",
+    "project_id": "everyday-budget",
+    "storage_bucket": "everyday-budget.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192196838109:android:acaafe60d0e730d9",
+        "android_client_info": {
+          "package_name": "com.example.travelbudget"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192196838109-k5cofgqoc1h7t2qleptmko7umph5k50q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.travelbudget",
+            "certificate_hash": "8126ef0c9e16ac6e80ab390c7ef49ac60e210d95"
+          }
+        },
+        {
+          "client_id": "192196838109-jcte93t2303ust2qapausjell87f54sk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNLB3hx4500Q_zB6OKoMiVAH0kuHa7q9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192196838109-jcte93t2303ust2qapausjell87f54sk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
