@@ -8,7 +8,7 @@ Project's aim is to demonstrate my Android development skills.
 ### Features:
 - Language: Kotlin
 - Single-Activity Architecture
-- Android Jetpack (Navigation, LiveData)
+- Android Jetpack (Navigation, Room, LiveData)
 - Firebase authentication (with Google)
 
 ### Install:
