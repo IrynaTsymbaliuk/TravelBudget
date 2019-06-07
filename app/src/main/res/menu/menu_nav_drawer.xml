@@ -47,12 +47,12 @@
 
         <item
             android:id="@+id/nav_feedback"
-            android:title="@string/send_a_feedback"
+            android:title="@string/send_feedback"
             android:icon="@drawable/ic_mail_grey_24dp"/>
 
         <item
             android:id="@+id/nav_offer"
-            android:title="@string/make_a_job_offer"
+            android:title="@string/make_job_offer"
             android:icon="@drawable/ic_mail_grey_24dp"/>
 
     </group>

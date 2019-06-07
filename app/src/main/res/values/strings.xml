@@ -3,7 +3,7 @@
     <string name="app_name">TravelBudget</string>
     <string name="title_activity_main">Travel budget</string>
 
-    <!--auth-->
+    <!--authFragment-->
     <string name="loading">Loading…</string>
     <string name="disconnect">Disconnect</string>
     <string name="sign_out">Sign Out</string>
@@ -28,7 +28,10 @@
     <!--menuNavDrawer-->
     <string name="change_account">Change account</string>
     <string name="settings">Settings</string>
-    <string name="send_a_feedback">Send a feedback"</string>
-    <string name="make_a_job_offer">Make a job offer</string>
+    <string name="send_feedback">Send a feedback"</string>
+    <string name="make_job_offer">Make a job offer</string>
+
+    <!--emptyTripCardFragment-->
+    <string name="add_new_trip">Add new trip</string>
 
 </resources>

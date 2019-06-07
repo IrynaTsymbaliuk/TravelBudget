@@ -1,16 +1,16 @@
-package com.example.travelbudget
+package com.example.travelbudget.ui
 
 import android.os.Bundle
-import android.util.EventLog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
-import com.google.firebase.auth.FirebaseUser
+import androidx.navigation.Navigation
+import com.example.travelbudget.R
+import kotlinx.android.synthetic.main.empty_trip_card_fragment.view.*
 
-class EmptyTripCardFragment : Fragment() {
+
+class AddTripFr : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,6 +19,8 @@ class EmptyTripCardFragment : Fragment() {
     ): View? {
 
         val rootView = inflater.inflate(R.layout.empty_trip_card_fragment, container, false)
+
+        rootView.empty_trip_card.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.create_trip))
 
         return rootView
 

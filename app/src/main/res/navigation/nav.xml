@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav"
-    app:startDestination="@id/authFragment">
+    app:startDestination="@id/add_trip">
 
     <fragment
-        android:id="@+id/authFragment"
-        android:name="com.example.travelbudget.AuthFragment"
-        android:label="AuthFragment" >
+        android:id="@+id/auth"
+        android:name="com.example.travelbudget.ui.AuthFr"
+        android:label="Authorization">
         <action
             android:id="@+id/action_authFragment_to_emptyTripCardFragment"
-            app:destination="@+id/emptyTripCardFragment" />
+            app:destination="@id/add_trip" />
     </fragment>
     <fragment
-        android:id="@+id/emptyTripCardFragment"
-        android:name="com.example.travelbudget.EmptyTripCardFragment"
-        android:label="EmptyTripCardFragment" >
+        android:id="@+id/create_trip"
+        android:name="com.example.travelbudget.ui.CreateTripFr"
+        android:label="Create trip">
+        <action
+            android:id="@+id/action_createTripStepperFragment_to_emptyTripCardFragment"
+            app:destination="@id/add_trip" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_trip"
+        android:name="com.example.travelbudget.ui.AddTripFr"
+        android:label="Add trip">
+        <action
+            android:id="@+id/action_emptyTripCardFragment_to_createTripStepperFragment"
+            app:destination="@id/create_trip" />
         <action
             android:id="@+id/action_emptyTripCardFragment_to_authFragment"
-            app:destination="@id/authFragment" />
+            app:destination="@id/auth" />
     </fragment>
 </navigation>

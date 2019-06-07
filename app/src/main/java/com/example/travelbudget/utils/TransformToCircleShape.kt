@@ -1,4 +1,4 @@
-package com.example.travelbudget
+package com.example.travelbudget.utils
 
 import android.graphics.*
 import com.squareup.picasso.Transformation

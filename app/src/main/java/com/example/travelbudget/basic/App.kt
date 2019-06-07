@@ -1,4 +1,4 @@
-package com.example.travelbudget
+package com.example.travelbudget.basic
 
 import android.app.Application
 

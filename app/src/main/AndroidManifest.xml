@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name="com.example.travelbudget.App">
+        android:name="com.example.travelbudget.basic.App">
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
