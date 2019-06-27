@@ -34,4 +34,27 @@
     <!--emptyTripCardFragment-->
     <string name="add_new_trip">Add new trip</string>
 
+    <!-- mainFragment-->
+    <string name="daily_budget">Daily budget</string>
+    <string name="savings">Savings</string>
+    <string name="mandatory_costs">Mandatory costs</string>
+    <string name="everyday_costs">Everyday costs</string>
+    <string name="drag">Drag</string>
+    <string name="income">Income</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="swipe">Swipe</string>
+
+    <!--createTripFragment-->
+    <string name="name">Name</string>
+    <string name="dates">Dates</string>
+    <string name="or">OR</string>
+    <string name="save">SAVE</string>
+
+    <!--emptyFragment-->
+    <string name="add_new_trip_to_display_your_current_budget">Add new trip to display your current budget.</string>
+
+    <!--addCost-->
+    <string name="add_cost">Add cost</string>
+
 </resources>
