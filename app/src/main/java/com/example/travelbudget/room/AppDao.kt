@@ -8,12 +8,20 @@ import androidx.room.Query
 @Dao
 interface AppDao {
 
-    // --- Cost --- //
     @Insert
     fun setCost(cost: Cost)
 
     @Query("SELECT * FROM cost_table")
     fun getAllCosts(): LiveData<List<Cost>>
+
+    @Query("SELECT * FROM cost_table WHERE date == :date")
+    fun getCostsOfDay(date : Long): LiveData<List<Cost>>
+
+    @Query("SELECT * FROM cost_table WHERE date == :date")
+    fun getCostsWithDate(date : Long): LiveData<List<Cost>>
+
+    @Query("SELECT * FROM cost_table WHERE date >= :dateFrom AND date <= :dateTo")
+    fun getCostsBetweenDates(dateFrom : Long, dateTo : Long): LiveData<List<Cost>>
 
     @Query("UPDATE cost_table SET costID = :costID")
     fun setCostID(costID: Int)
@@ -33,9 +41,29 @@ interface AppDao {
     @Query("SELECT sum FROM cost_table")
     fun getCostSum(): Int
 
-    // --- Trip --- //
     @Insert
     fun setTrip(trip: Trip)
+
+    @Query("SELECT * FROM trip_table WHERE tripID = :tripID")
+    fun getTripWithID(tripID: Long): LiveData<Trip>
+
+    @Query("SELECT tripID FROM trip_table")
+    fun getListOfTripIDs() : LiveData<List<Long>>
+
+    @Query("SELECT name FROM trip_table WHERE tripID = :tripID")
+    fun getTripNameWithID(tripID: Long): LiveData<String>
+
+    @Query("SELECT dateFrom FROM trip_table WHERE tripID = :tripID")
+    fun getTripDateFromWithID(tripID: Long): LiveData<Long>
+
+    @Query("SELECT dateTo FROM trip_table WHERE tripID = :tripID")
+    fun getTripDateToWithID(tripID: Long): LiveData<Long>
+
+    @Query("SELECT income FROM trip_table WHERE tripID = :tripID")
+    fun getTripIncomeWithID(tripID: Long): LiveData<Int>
+
+    @Query("SELECT percentOfSaving FROM trip_table WHERE tripID = :tripID")
+    fun getTripPercentageOfSavingsWithID(tripID: Long): LiveData<Int>
 
     @Query("SELECT * FROM trip_table WHERE dateFrom >= :date OR dateTo <= :date")
     fun getTripWithDate(date: Long): LiveData<Trip>

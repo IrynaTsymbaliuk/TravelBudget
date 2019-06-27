@@ -10,4 +10,5 @@ data class Cost(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "costID") var costID: Long,
     @ColumnInfo(name = "date") var date: Long,
     @ColumnInfo(name = "sum")  var sum: Int
+
 )

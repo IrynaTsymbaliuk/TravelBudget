@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.travelbudget.basic.App
 
 @Database(entities = [Cost::class, Trip::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
@@ -21,7 +22,7 @@ abstract class AppDatabase : RoomDatabase() {
             }
             synchronized(this) {
                 val instance = Room.databaseBuilder(
-                    context.applicationContext,
+                    App.instance,
                     AppDatabase::class.java,
                     "Word_database"
                 ).build()
