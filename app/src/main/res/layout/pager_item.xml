@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/custom_card"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardElevation="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/trip_gradient"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/existing_trip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/trip_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Kyiv" />
+
+            <TextView
+                android:id="@+id/trip_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/trip_name"
+                app:layout_constraintTop_toBottomOf="@id/trip_name"
+                tools:text="Feb, 10 - Mar, 16" />
+
+            <TextView
+                android:id="@+id/daily_budget_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/trip_name"
+                app:layout_constraintTop_toBottomOf="@id/trip_dates"
+                tools:text="500" />
+
+            <TextView
+                android:id="@+id/daily_budget_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/daily_budget_sum"
+                app:layout_constraintStart_toEndOf="@id/daily_budget_sum"
+                tools:text="₴" />
+
+            <TextView
+                android:id="@+id/daily_budget_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/daily_budget"
+                android:textColor="@color/grey_300"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/daily_budget_sum"
+                app:layout_constraintTop_toBottomOf="@id/daily_budget_sum" />
+
+            <TextView
+                android:id="@+id/savings_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/daily_budget_sum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline_v05"
+                tools:text="12.500" />
+
+            <TextView
+                android:id="@+id/savings_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/savings_sum"
+                app:layout_constraintStart_toEndOf="@id/savings_sum"
+                tools:text="₴" />
+
+            <TextView
+                android:id="@+id/savings_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/savings"
+                android:textColor="@color/grey_300"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/savings_sum"
+                app:layout_constraintTop_toBottomOf="@id/savings_sum" />
+
+            <TextView
+                android:id="@+id/mandatory_expenses_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/daily_budget_sum"
+                app:layout_constraintTop_toBottomOf="@+id/daily_budget_title"
+                tools:text="25.000" />
+
+            <TextView
+                android:id="@+id/mandatory_expenses_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/mandatory_expenses_sum"
+                app:layout_constraintStart_toEndOf="@id/mandatory_expenses_sum"
+                tools:text="₴" />
+
+            <TextView
+                android:id="@+id/mandatory_expenses_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mandatory_costs"
+                android:textColor="@color/grey_300"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/mandatory_expenses_sum"
+                app:layout_constraintTop_toBottomOf="@id/mandatory_expenses_sum" />
+
+            <TextView
+                android:id="@+id/everyday_expenses_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/mandatory_expenses_sum"
+                app:layout_constraintStart_toStartOf="@id/savings_sum"
+                tools:text="15.000" />
+
+            <TextView
+                android:id="@+id/everyday_expenses_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/everyday_costs"
+                android:textColor="@color/grey_300"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/mandatory_expenses_title"
+                app:layout_constraintStart_toStartOf="@id/savings_title" />
+
+            <TextView
+                android:id="@+id/everyday_expenses_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/mandatory_expenses_currency"
+                app:layout_constraintStart_toEndOf="@id/everyday_expenses_sum"
+                tools:text="₴" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_v05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <ImageView
+                android:id="@+id/drag_handle_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_drag_handle_white_48x24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mandatory_expenses_title"
+                android:contentDescription="@string/drag" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/trip_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/trip_settings_gradient"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/custom_card">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/income_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="2000  ₴"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/income_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/income"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/income_input"
+            app:layout_constraintTop_toBottomOf="@id/income_input" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/percentage_of_savings_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="25 %"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/income_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline_v5" />
+
+        <TextView
+            android:id="@+id/percentage_of_savings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/savings"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/percentage_of_savings_input"
+            app:layout_constraintTop_toBottomOf="@id/percentage_of_savings_input" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_trip_settings"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="@id/save_trip_settings"
+            app:layout_constraintEnd_toStartOf="@id/save_trip_settings"
+            app:layout_constraintTop_toTopOf="@id/save_trip_settings" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_trip_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/grey_300"
+            android:text="@string/ok"
+            app:layout_constraintStart_toStartOf="@id/percentage_of_savings_input"
+            app:layout_constraintTop_toBottomOf="@id/percentage_of_savings_title" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_of_days"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trip_settings" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

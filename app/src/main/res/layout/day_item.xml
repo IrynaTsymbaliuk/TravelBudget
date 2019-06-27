@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/day_item"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+        android:id="@+id/day_of_weeek_and_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Thu,  2 of May"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/daily_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="505 $"
+        android:textColor="#acd679"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/day_of_weeek_and_month"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/day_of_weeek_and_month" />
+
+    <TextView
+        android:id="@+id/daily_costs"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="8 + 81 + 176 + 84 + 345 = 694 from 1199 $"
+        android:textColor="@color/grey_500"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/day_of_weeek_and_month"
+        app:layout_constraintEnd_toStartOf="@id/daily_balance"
+        app:layout_constraintTop_toBottomOf="@id/day_of_weeek_and_month" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

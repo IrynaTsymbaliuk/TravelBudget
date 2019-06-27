@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/dates_cv"
+        app:layout_constraintBottom_toTopOf="@id/dates_cv"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Name"
+                android:text="@string/name"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Dates"
+                android:text="@string/dates"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -145,7 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Income"
+                android:text="@string/income"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -211,7 +217,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@id/create_trip_button"
+        app:layout_constraintBottom_toTopOf="@id/save_trip_material_button"
         app:layout_constraintTop_toBottomOf="@+id/income_cv">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -225,14 +231,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Savings"
+                android:text="@string/savings"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/percent_til"
+                android:id="@+id/sum_til"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -245,7 +251,7 @@
                 app:layout_constraintTop_toBottomOf="@id/savings_title">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/percent_et"
+                    android:id="@+id/sum_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
@@ -258,14 +264,14 @@
                 android:layout_height="0dp"
                 android:layout_marginBottom="4dp"
                 android:gravity="center"
-                android:text="OR"
-                app:layout_constraintBottom_toBottomOf="@id/percent_til"
-                app:layout_constraintEnd_toStartOf="@id/sum_til"
-                app:layout_constraintStart_toEndOf="@id/percent_til"
-                app:layout_constraintTop_toTopOf="@id/percent_til" />
+                android:text="@string/or"
+                app:layout_constraintBottom_toBottomOf="@id/sum_til"
+                app:layout_constraintEnd_toStartOf="@id/percentage_til"
+                app:layout_constraintStart_toEndOf="@id/sum_til"
+                app:layout_constraintTop_toTopOf="@id/sum_til" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/sum_til"
+                android:id="@+id/percentage_til"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -278,7 +284,7 @@
                 app:layout_constraintTop_toBottomOf="@id/savings_title">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/sum_et"
+                    android:id="@+id/percentage_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
@@ -297,7 +303,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/create_trip_button"
+        android:id="@+id/save_trip_material_button"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
@@ -305,7 +311,7 @@
         android:layout_marginEnd="16dp"
         android:background="@android:color/black"
         android:gravity="center"
-        android:text="SAVE"
+        android:text="@string/save"
         android:textColor="@android:color/darker_gray"
         android:textSize="12sp"
         app:icon="@drawable/ic_check_grey_24dp"
@@ -316,3 +322,5 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
